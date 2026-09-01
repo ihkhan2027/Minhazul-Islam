@@ -33,10 +33,10 @@ export function AboutSection() {
                 src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1000&q=80"
                 alt="Microbiology laboratory and analytical quality control research"
                 referrerPolicy="no-referrer"
-                className="w-full h-64 sm:h-72 object-cover grayscale contrast-105 filter brightness-95 group-hover:scale-102 transition-transform duration-500"
+                className="w-full h-64 sm:h-72 object-cover contrast-105 filter brightness-95 group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-emerald-950/15 mix-blend-multiply" />
-              <div className="absolute bottom-0 inset-x-0 bg-stone-950/75 backdrop-blur-xs text-white p-3.5 flex items-center justify-between text-xs font-mono-code">
+              <div className="absolute inset-0 bg-emerald-950/10 mix-blend-multiply" />
+              <div className="absolute bottom-0 inset-x-0 bg-stone-950/80 backdrop-blur-xs text-white p-3.5 flex items-center justify-between text-xs font-mono-code">
                 <span className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   Sterile Analytical QC & Biosafety

@@ -88,7 +88,7 @@ export function ContactSection() {
                 <button
                   onClick={handleCopyEmail}
                   id="contact-copy-email-btn"
-                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-stone-200 text-xs font-medium text-stone-700 hover:bg-stone-50 transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border-2 border-emerald-600/30 hover:border-emerald-600 bg-emerald-50/50 hover:bg-emerald-100/60 text-xs font-semibold text-emerald-900 transition-all shadow-xs"
                   title="Copy email to clipboard"
                 >
                   {copiedEmail ? (
@@ -98,7 +98,7 @@ export function ContactSection() {
                     </>
                   ) : (
                     <>
-                      <Copy className="w-3.5 h-3.5 text-stone-400" />
+                      <Copy className="w-3.5 h-3.5 text-emerald-700" />
                       <span>Copy</span>
                     </>
                   )}
@@ -107,7 +107,7 @@ export function ContactSection() {
                 <a
                   href={`mailto:${contactInfo.email}`}
                   id="contact-mailto-btn"
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-stone-900 text-white text-xs font-medium hover:bg-emerald-900 transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-semibold shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 hover:-translate-y-0.5 active:translate-y-0 transition-all"
                 >
                   <span>Compose</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -132,7 +132,7 @@ export function ContactSection() {
                   <div className="flex items-center gap-2 pt-1">
                     <button
                       onClick={handleCopyPhone}
-                      className="text-xs text-stone-500 hover:text-stone-900 inline-flex items-center gap-1"
+                      className="text-xs text-emerald-700 hover:text-emerald-900 font-medium inline-flex items-center gap-1 bg-emerald-50/70 hover:bg-emerald-100/80 px-2.5 py-1 rounded-md border border-emerald-200/60 transition-colors"
                     >
                       {copiedPhone ? <Check className="w-3 h-3 text-emerald-700" /> : <Copy className="w-3 h-3" />}
                       {copiedPhone ? 'Copied' : 'Copy number'}

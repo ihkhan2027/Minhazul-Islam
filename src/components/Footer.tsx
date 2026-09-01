@@ -29,10 +29,10 @@ export function Footer() {
           <button
             onClick={scrollToTop}
             id="footer-back-to-top"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-stone-200 hover:border-stone-300 text-stone-700 hover:text-stone-950 text-xs font-mono-code transition-colors"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 hover:bg-emerald-100 hover:border-emerald-300 text-emerald-800 hover:text-emerald-950 text-xs font-mono-code font-medium transition-all shadow-xs"
           >
             <span>Back to Top</span>
-            <ArrowUp className="w-3 h-3" />
+            <ArrowUp className="w-3 h-3 text-emerald-600" />
           </button>
         </div>
 

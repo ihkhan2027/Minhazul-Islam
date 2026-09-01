@@ -65,7 +65,7 @@ export function Navbar({ onOpenContactModal }: NavbarProps) {
           <a
             href="#contact"
             id="nav-connect-button"
-            className="ml-2 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-stone-900 text-stone-50 hover:bg-emerald-900 transition-colors"
+            className="ml-2 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white shadow-sm shadow-emerald-600/30 hover:shadow-md hover:shadow-emerald-600/40 hover:-translate-y-0.5 active:translate-y-0 transition-all"
           >
             <span>Let's Connect</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -78,7 +78,7 @@ export function Navbar({ onOpenContactModal }: NavbarProps) {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             id="nav-mobile-toggle"
             aria-label="Toggle Navigation Menu"
-            className="p-2 text-stone-700 hover:text-stone-900 focus:outline-none"
+            className="p-2 text-stone-700 hover:text-emerald-700 focus:outline-none"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -94,7 +94,7 @@ export function Navbar({ onOpenContactModal }: NavbarProps) {
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-stone-700 hover:text-stone-900 py-1.5 border-b border-stone-100"
+                className="text-base font-medium text-stone-700 hover:text-emerald-700 py-1.5 border-b border-stone-100"
               >
                 {item.label}
               </a>
@@ -102,7 +102,7 @@ export function Navbar({ onOpenContactModal }: NavbarProps) {
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="inline-flex items-center justify-center gap-2 w-full mt-2 py-2.5 rounded-lg bg-stone-900 text-stone-50 text-sm font-medium"
+              className="inline-flex items-center justify-center gap-2 w-full mt-2 py-2.5 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-sm font-semibold shadow-md shadow-emerald-600/25"
             >
               Let's Connect
               <ArrowUpRight className="w-4 h-4" />

@@ -16,9 +16,9 @@ export function Hero() {
           <div className="lg:col-span-7 space-y-8">
             
             {/* Status metadata pill */}
-            <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-stone-100/90 border border-stone-200/80 text-stone-600 text-xs font-mono-code">
-              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
-              <span>{personalData.status}</span>
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-mono-code shadow-xs">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse ring-4 ring-emerald-400/20" />
+              <span className="font-medium">{personalData.status}</span>
             </div>
 
             {/* Main Headline with new editorial Newsreader styling */}
@@ -27,7 +27,7 @@ export function Hero() {
                 Minhajul Islam Tuhin
               </h1>
               <div className="flex flex-wrap items-center gap-2.5 text-lg sm:text-xl font-light text-stone-600">
-                <span className="font-medium text-emerald-900">Microbiologist</span>
+                <span className="font-semibold text-emerald-700 bg-emerald-50/80 px-2.5 py-0.5 rounded-md border border-emerald-200/60">Microbiologist</span>
                 <span className="text-stone-300">/</span>
                 <span className="text-stone-700">Environmental & Resource Management</span>
               </div>
@@ -43,7 +43,7 @@ export function Hero() {
               <a
                 href="#experience"
                 id="hero-cta-explore"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-stone-900 text-stone-50 hover:bg-emerald-900 text-sm font-medium transition-all shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-sm font-semibold shadow-md shadow-emerald-600/30 hover:shadow-lg hover:shadow-emerald-600/40 hover:-translate-y-0.5 active:translate-y-0 transition-all"
               >
                 <span>View Background</span>
                 <ArrowDown className="w-4 h-4" />
@@ -52,9 +52,9 @@ export function Hero() {
               <a
                 href="#contact"
                 id="hero-cta-contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white border border-stone-300 hover:border-stone-400 text-stone-800 text-sm font-medium hover:bg-stone-50 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white border-2 border-emerald-600/30 hover:border-emerald-600 text-emerald-950 text-sm font-semibold hover:bg-emerald-50/70 shadow-xs hover:shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all"
               >
-                <Mail className="w-4 h-4 text-emerald-800" />
+                <Mail className="w-4 h-4 text-emerald-600" />
                 <span>Contact Directly</span>
               </a>
             </div>

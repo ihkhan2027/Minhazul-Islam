@@ -35,10 +35,10 @@ export function EducationSection() {
                 src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1000&q=80"
                 alt="Molecular diagnostic and environmental microbiology research laboratory"
                 referrerPolicy="no-referrer"
-                className="w-full h-56 object-cover grayscale contrast-105 filter brightness-95 group-hover:scale-102 transition-transform duration-500"
+                className="w-full h-56 object-cover contrast-105 filter brightness-95 group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-emerald-950/15 mix-blend-multiply" />
-              <div className="absolute bottom-0 inset-x-0 bg-stone-950/75 backdrop-blur-xs text-white p-3 flex items-center justify-between text-xs font-mono-code">
+              <div className="absolute inset-0 bg-emerald-950/10 mix-blend-multiply" />
+              <div className="absolute bottom-0 inset-x-0 bg-stone-950/80 backdrop-blur-xs text-white p-3 flex items-center justify-between text-xs font-mono-code">
                 <span className="flex items-center gap-1.5">
                   <Dna className="w-3.5 h-3.5 text-emerald-400" />
                   Molecular Diagnostics & Resource Ecology
@@ -49,7 +49,7 @@ export function EducationSection() {
           </div>
 
           {/* Right Column: Minimal Academic Timeline */}
-          <div className="lg:col-span-7 relative border-l border-stone-200 pl-6 sm:pl-8 space-y-10">
+          <div className="lg:col-span-7 relative border-l border-emerald-200/80 pl-6 sm:pl-8 space-y-10">
             {educationList.map((edu) => (
               <div
                 key={edu.id}
@@ -57,16 +57,16 @@ export function EducationSection() {
                 className="relative group"
               >
                 {/* Minimal timeline node */}
-                <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full border-2 border-stone-900 bg-[#FAFAF9] group-hover:bg-emerald-800 group-hover:border-emerald-800 transition-colors" />
+                <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full border-2 border-emerald-600 bg-emerald-100 group-hover:bg-emerald-600 group-hover:border-emerald-700 transition-colors shadow-xs" />
 
                 <div className="space-y-2">
                   
                   {/* Period & Location */}
                   <div className="flex flex-wrap items-center gap-3 text-xs font-mono-code text-stone-500">
-                    <span className="text-emerald-800 font-semibold">{edu.period}</span>
+                    <span className="text-emerald-800 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60">{edu.period}</span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <MapPin className="w-3 h-3 text-stone-400" />
+                      <MapPin className="w-3 h-3 text-emerald-700" />
                       {edu.location}
                     </span>
                   </div>
@@ -77,13 +77,13 @@ export function EducationSection() {
                   </h3>
 
                   {/* Institution */}
-                  <p className="text-sm font-medium text-stone-700">
+                  <p className="text-sm font-medium text-emerald-900">
                     {edu.institution}
                   </p>
 
                   {/* Thesis / Focus Highlight */}
                   {edu.thesis && (
-                    <div className="mt-2.5 p-3 rounded-lg bg-emerald-950/[0.03] border border-emerald-900/10 text-xs text-stone-700 font-light leading-relaxed">
+                    <div className="mt-2.5 p-3 rounded-lg bg-emerald-50/70 border border-emerald-200/70 text-xs text-stone-800 font-light leading-relaxed">
                       <span className="font-mono-code text-emerald-800 font-semibold uppercase tracking-wider block mb-1">
                         Thesis Focus
                       </span>
