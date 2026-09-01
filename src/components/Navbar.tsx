@@ -30,8 +30,8 @@ export function Navbar({ onOpenContactModal }: NavbarProps) {
       id="main-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#FAFAF9]/90 backdrop-blur-md border-b border-stone-200/80 py-3 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
-          : 'bg-transparent py-5 border-b border-transparent'
+          ? 'bg-[#FAFAF9]/95 backdrop-blur-md border-b border-stone-200/80 py-3 shadow-md shadow-stone-900/10'
+          : 'bg-[#FAFAF9]/80 backdrop-blur-sm py-4 border-b border-stone-200/50 shadow-sm shadow-stone-900/5'
       }`}
     >
       <div className="max-w-[1240px] mx-auto px-6 sm:px-8 flex items-center justify-between">
