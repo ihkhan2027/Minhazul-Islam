@@ -6,15 +6,34 @@ export function ContactSection() {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(contactInfo.email);
+  const copyToClipboard = async (text: string) => {
+    try {
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-9999px';
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+      }
+    } catch (err) {
+      console.warn('Clipboard write fallback error:', err);
+    }
+  };
+
+  const handleCopyEmail = async () => {
+    await copyToClipboard(contactInfo.email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
 
-  const handleCopyPhone = () => {
+  const handleCopyPhone = async () => {
     if (contactInfo.phone) {
-      navigator.clipboard.writeText(contactInfo.phone);
+      await copyToClipboard(contactInfo.phone);
       setCopiedPhone(true);
       setTimeout(() => setCopiedPhone(false), 2000);
     }
