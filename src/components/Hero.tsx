@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="hero-section"
-      className="relative min-h-[88vh] flex flex-col justify-center pt-28 pb-16 md:pt-36 md:pb-24 border-b border-stone-200/70"
+      className="relative min-h-[88vh] flex flex-col justify-center pt-28 pb-16 md:pt-36 md:pb-24 border-b border-black/15"
     >
       <div className="max-w-[1240px] mx-auto px-6 sm:px-8 w-full">
         {/* Editorial Layout: Asymmetric 2-column with ample negative space */}
@@ -16,25 +16,25 @@ export function Hero() {
           <div className="lg:col-span-7 space-y-8">
             
             {/* Status metadata pill */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-mono-code shadow-xs">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-950 text-xs font-mono-code shadow-xs">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse ring-4 ring-emerald-400/20" />
-              <span className="font-medium">{personalData.status}</span>
+              <span className="font-semibold">{personalData.status}</span>
             </div>
 
             {/* Main Headline with new editorial Newsreader styling */}
             <div className="space-y-3">
-              <h1 className="font-editorial text-5xl sm:text-6xl lg:text-7xl font-normal text-stone-950 tracking-tight leading-[1.06]">
+              <h1 className="font-editorial text-5xl sm:text-6xl lg:text-7xl font-semibold text-black tracking-tight leading-[1.06]">
                 Minhajul Islam Tuhin
               </h1>
-              <div className="flex flex-wrap items-center gap-2.5 text-lg sm:text-xl font-light text-stone-600">
-                <span className="font-semibold text-emerald-700 bg-emerald-50/80 px-2.5 py-0.5 rounded-md border border-emerald-200/60">Microbiologist</span>
-                <span className="text-stone-300">/</span>
-                <span className="text-stone-700">Environmental & Resource Management</span>
+              <div className="flex flex-wrap items-center gap-2.5 text-lg sm:text-xl font-light text-black/90">
+                <span className="font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200">Microbiologist</span>
+                <span className="text-black/40">/</span>
+                <span className="text-black font-medium">Environmental & Resource Management</span>
               </div>
             </div>
 
             {/* Concise 1-2 line intro strictly grounded */}
-            <p className="text-base sm:text-lg text-stone-600 leading-relaxed max-w-xl font-light">
+            <p className="text-base sm:text-lg text-black/85 leading-relaxed max-w-xl font-normal">
               Specialized in pharmaceutical microbiological quality control and sterile cleanroom assurance, currently advancing postgraduate research in Environmental and Resource Management in Germany.
             </p>
 
@@ -60,7 +60,7 @@ export function Hero() {
             </div>
 
             {/* Micro scientific tags */}
-            <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-stone-500 font-mono-code border-t border-stone-200/60">
+            <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-black/80 font-mono-code border-t border-black/15 font-medium">
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
                 Pharmaceutical cGMP / GLP

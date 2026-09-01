@@ -42,29 +42,29 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-20 md:py-28 bg-[#F5F5F3]/50"
+      className="py-20 md:py-28 bg-black/[0.02] border-b border-black/15"
     >
       <div className="max-w-[1240px] mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
-        <div className="flex items-center gap-3 text-xs font-mono-code text-stone-500 uppercase tracking-widest mb-8">
-          <span className="text-emerald-800 font-semibold">[ 05 ]</span>
+        <div className="flex items-center gap-3 text-xs font-mono-code text-black/80 uppercase tracking-widest mb-8 font-medium">
+          <span className="text-emerald-800 font-bold">[ 05 ]</span>
           <span>Inquiries & Communication</span>
-          <div className="h-px bg-stone-200 flex-1 max-w-[120px]" />
+          <div className="h-px bg-black/20 flex-1 max-w-[120px]" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
           {/* Left Column: Heading */}
           <div className="lg:col-span-5 space-y-4">
-            <h2 className="font-editorial text-4xl sm:text-5xl text-stone-900 leading-[1.12]">
+            <h2 className="font-editorial text-4xl sm:text-5xl text-black font-semibold leading-[1.12]">
               Let’s Connect.
             </h2>
-            <p className="text-base text-stone-600 font-light leading-relaxed">
+            <p className="text-base text-black/85 font-normal leading-relaxed">
               Open for professional scientific collaboration, quality control consultancy, environmental research discussions, and academic inquiries.
             </p>
 
-            <div className="pt-4 flex items-center gap-2 text-xs font-mono-code text-stone-500">
+            <div className="pt-4 flex items-center gap-2 text-xs font-mono-code text-black/80 font-medium">
               <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
               <span>Available for scientific roles in Germany & Europe</span>
             </div>
@@ -74,12 +74,12 @@ export function ContactSection() {
           <div className="lg:col-span-7 space-y-6">
             
             {/* Email Card / Block */}
-            <div className="p-6 rounded-xl bg-white border border-stone-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.02)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="p-6 rounded-xl bg-white border border-black/15 shadow-md shadow-black/5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="space-y-1">
-                <span className="text-xs font-mono-code uppercase tracking-wider text-stone-400">
+                <span className="text-xs font-mono-code uppercase tracking-wider text-black/70 font-semibold">
                   Electronic Mail
                 </span>
-                <div className="text-lg font-medium text-stone-900">
+                <div className="text-lg font-semibold text-black">
                   {contactInfo.email}
                 </div>
               </div>
@@ -120,12 +120,12 @@ export function ContactSection() {
               
               {/* Phone info */}
               {contactInfo.phone && (
-                <div className="p-5 rounded-xl bg-white border border-stone-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.02)] flex flex-col justify-between space-y-2">
+                <div className="p-5 rounded-xl bg-white border border-black/15 shadow-md shadow-black/5 flex flex-col justify-between space-y-2">
                   <div className="space-y-1">
-                    <span className="text-xs font-mono-code uppercase tracking-wider text-stone-400">
+                    <span className="text-xs font-mono-code uppercase tracking-wider text-black/70 font-semibold">
                       Telephone
                     </span>
-                    <div className="text-sm font-medium text-stone-800">
+                    <div className="text-sm font-semibold text-black">
                       {contactInfo.phone}
                     </div>
                   </div>
@@ -142,15 +142,15 @@ export function ContactSection() {
               )}
 
               {/* Location info */}
-              <div className="p-5 rounded-xl bg-white border border-stone-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.02)] space-y-2">
-                <span className="text-xs font-mono-code uppercase tracking-wider text-stone-400">
+              <div className="p-5 rounded-xl bg-white border border-black/15 shadow-md shadow-black/5 space-y-2">
+                <span className="text-xs font-mono-code uppercase tracking-wider text-black/70 font-semibold">
                   Location & Base
                 </span>
-                <div className="text-sm font-medium text-stone-800 flex items-center gap-1.5">
+                <div className="text-sm font-semibold text-black flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-emerald-800" />
                   <span>{contactInfo.location}</span>
                 </div>
-                <p className="text-xs text-stone-500 font-mono-code">
+                <p className="text-xs text-black/80 font-mono-code">
                   Coords: {contactInfo.coordinates}
                 </p>
               </div>

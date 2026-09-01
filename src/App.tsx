@@ -14,7 +14,7 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#FAFAF9] text-[#18181B] relative selection:bg-emerald-900 selection:text-emerald-50">
+    <div className="min-h-screen bg-white text-black relative selection:bg-emerald-900 selection:text-emerald-50">
       {/* Background subtle micro-grid overlay */}
       <div className="fixed inset-0 bg-grid-delicate pointer-events-none opacity-60 z-0" />
 

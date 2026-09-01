@@ -253,19 +253,19 @@ export function MicroscopyVisual() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full h-full min-h-[340px] md:min-h-[420px] rounded-2xl border border-stone-200/80 bg-white/80 backdrop-blur-[2px] p-4 flex flex-col justify-between overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.02)]"
+      className="relative w-full h-full min-h-[340px] md:min-h-[420px] rounded-2xl border border-black/15 bg-white/90 backdrop-blur-[2px] p-4 flex flex-col justify-between overflow-hidden shadow-md shadow-black/5"
     >
       {/* Top telemetry bar with View Switcher */}
-      <div className="relative z-20 flex items-center justify-between text-[11px] font-mono-code text-stone-500 tracking-wider">
+      <div className="relative z-20 flex items-center justify-between text-[11px] font-mono-code text-black/80 tracking-wider">
         <div className="flex items-center gap-2">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
-          <div className="flex items-center gap-1 bg-stone-100/90 p-0.5 rounded border border-stone-200/70 text-[10px]">
+          <span className="inline-block w-2 h-2 rounded-full bg-emerald-600 animate-pulse ring-4 ring-emerald-400/20" />
+          <div className="flex items-center gap-1 bg-black/[0.04] p-0.5 rounded border border-black/10 text-[10px]">
             <button
               onClick={() => setViewMode('canvas')}
               className={`px-2 py-0.5 rounded transition-all ${
                 viewMode === 'canvas'
-                  ? 'bg-white text-stone-900 shadow-xs font-semibold'
-                  : 'text-stone-500 hover:text-stone-800'
+                  ? 'bg-black text-white shadow-xs font-semibold'
+                  : 'text-black/70 hover:text-black font-medium'
               }`}
             >
               Optics Simulation
@@ -274,8 +274,8 @@ export function MicroscopyVisual() {
               onClick={() => setViewMode('photo')}
               className={`px-2 py-0.5 rounded transition-all ${
                 viewMode === 'photo'
-                  ? 'bg-white text-stone-900 shadow-xs font-semibold'
-                  : 'text-stone-500 hover:text-stone-800'
+                  ? 'bg-black text-white shadow-xs font-semibold'
+                  : 'text-black/70 hover:text-black font-medium'
               }`}
             >
               Lab Micrograph
@@ -284,15 +284,15 @@ export function MicroscopyVisual() {
         </div>
 
         {viewMode === 'canvas' ? (
-          <div className="flex items-center gap-1.5 bg-stone-100/80 px-2 py-0.5 rounded border border-stone-200/60 text-[10px]">
+          <div className="flex items-center gap-1.5 bg-black/[0.04] px-2 py-0.5 rounded border border-black/10 text-[10px]">
             {(['100x', '400x', '1000x'] as const).map((mag) => (
               <button
                 key={mag}
                 onClick={() => setActiveMagnification(mag)}
                 className={`px-1.5 py-0.5 rounded transition-colors ${
                   activeMagnification === mag
-                    ? 'bg-stone-900 text-white font-semibold'
-                    : 'text-stone-500 hover:text-stone-800'
+                    ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold shadow-xs'
+                    : 'text-black/70 hover:text-black font-medium'
                 }`}
               >
                 {mag}
@@ -300,7 +300,7 @@ export function MicroscopyVisual() {
             ))}
           </div>
         ) : (
-          <span className="text-[10px] text-stone-500 bg-stone-100/80 px-2 py-0.5 rounded border border-stone-200/60">
+          <span className="text-[10px] text-emerald-950 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
             AGAR COLONY BIOBURDEN
           </span>
         )}
@@ -321,7 +321,7 @@ export function MicroscopyVisual() {
             src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
             alt="Microbiology culture agar plate in sterile pharmaceutical laboratory"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover grayscale contrast-105 filter brightness-95 opacity-90 transition-transform duration-700 hover:scale-105"
+            className="w-full h-full object-cover contrast-105 filter brightness-95 opacity-90 transition-transform duration-700 hover:scale-105"
           />
           {/* Subtle laboratory grid & reticle overlay */}
           <div className="absolute inset-0 bg-emerald-950/10 mix-blend-multiply pointer-events-none" />
@@ -340,17 +340,17 @@ export function MicroscopyVisual() {
       )}
 
       {/* Bottom telemetry overlay */}
-      <div className="relative z-20 flex items-end justify-between text-[10px] font-mono-code text-stone-600 bg-white/85 backdrop-blur-xs px-2.5 py-1.5 rounded-lg border border-stone-200/70 mt-auto shadow-xs">
+      <div className="relative z-20 flex items-end justify-between text-[10px] font-mono-code text-black/85 bg-white/95 backdrop-blur-xs px-2.5 py-1.5 rounded-lg border border-black/15 mt-auto shadow-xs">
         <div>
-          <span className="text-stone-900 font-semibold">
+          <span className="text-black font-bold">
             {viewMode === 'canvas' ? 'SPECIMEN:' : 'ASSAY:'}
           </span>{' '}
           {viewMode === 'canvas' ? 'IN-VITRO MEMBRANE DYNAMICS' : 'PURIFIED WATER BIOBURDEN (CFU/mL)'}
         </div>
         <div className="text-right flex items-center gap-2 sm:gap-3">
           <span>SCALE: 10 µm</span>
-          <span className="hidden sm:inline text-stone-300">|</span>
-          <span className="hidden sm:inline text-stone-700 font-medium">ISO 14644-1 GRADE A</span>
+          <span className="hidden sm:inline text-black/30">|</span>
+          <span className="hidden sm:inline text-emerald-800 font-bold">ISO 14644-1 GRADE A</span>
         </div>
       </div>
     </div>
